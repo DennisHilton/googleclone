@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Google</title>
+        <link href="index.css" rel="stylesheet">
+        
+    </head>
+    <body>
+     <nav>
+        <span href="#">Gmail </span> 
+        <span href="#">Images </span> 
+        <img src="./images/app.png" >
+        <button>Sign in</button>
+          </nav>
+          <section class="section">
+          <img src="./images/google2.0.0.jpg" class="googleLogo">
+         <br></br>
+            <div class="searchBox">
+                <img src="./images/853-8539483_png-file-search-button-icon-png.png" class="search-icon">
+                <input type="text" id="s-input">
+                <img src="./images/imagessss.png" class="microphone">
+                <p id="pTag"></p>
+                <input type="submit" class="s-btn" value="Google Search" onclick="getResult()">
+                <input type="submit" class="s-btn" value="I'm Feeling Lucky">
+            </div>
+       
+        <div id="cert">
+            Get qualified for in-demand jobs with <a href="#">Google Career Certificates</a>
+        </div>
+        <div class="lang">
+            Google offered in:
+            <a href="#">Hausa</a>
+            <a href="#">Akan</a>
+            <a href="#">Ewe</a>
+            <a href="#">Ga</a>
+        </div> 
+          </section>
+       <footer>
+        <h4>Ghana</h4>
+    <div class="footerLink">
+        <div class="footerLink1">
+            <a href="#">About</a>
+            <a href="#">Advertising</a>
+            <a href="#">Business</a>
+            <a href="#">How Search Works</a>
+        </div>
+        <div class="footerLink2">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Settings</a>
+        </div>
+    </div>
+       </footer>
+    </body>
+    
+    
+    <script>
+const data = 
+{
+    issues:"Issues is the debut single recorded by American singer and songwriter Julia Michaels, from her third EP Nervous System (2017).The song was co-written with Justin Tranter, and its producers Benny Blanco and Stargate.",
+    computer:"A computer is a digital electronic machine that can be programmed to carry out sequences of arithmetic or logical operations (computation) automatically",
+    food:"Food is any substance consumed to provide nutritional support for an organism",
+    love:"a feeling of warm personal attachment or deep affection, as for a parent, child, or friend.",
+    brokenHeart:"Broken heart is a metaphor for the intense emotional stress or pain one feels at experiencing great and deep longing.",
+    Jealousy:"Jealousy generally refers to the thoughts or feelings of insecurity, fear, and concern over a relative lack of possessions or safety.",
+    Family:"a group of one or more parents and their children living together as a unit."
+}
+ 
+     
+
+     function getResults(searchedData, data) {
+        let searchedData= document.getElementById("s-input").value;
+     let pTag=document.getElementbyId("pTag");
+        const key = Object.keys(data);
+        if (key.includes(searchedData)){
+            alert(data[searchedData])
+        }
+    }
+
+
+
+    getResults(searchedData, data)
+
+
+
+
+
+
+    //     function matchResults(data,searchedData) {
+    //     // const regex = "^(.*?(\b" + data + "\b)[^$]*)$";
+    //     let results = searchedData.match(regex);
+    //     pTag.innerHTML = results;
+    // }
+    //     matchResults(data, "love")
+        </script>
